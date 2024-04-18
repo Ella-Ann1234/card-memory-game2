@@ -1,0 +1,459 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Ojuju", sans-serif;
+  display: grid;
+  background-color: rgb(81, 38, 8);
+  height: 100%;
+  width: 100%;
+}
+
+.welcomePage {
+  height: 50%;
+  width: min(70rem, 90%);
+  margin: auto;
+  position: relative;
+}
+
+.welcomePageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.instructions {
+  background-color: rgb(81, 38, 8);
+  border: 2px solid rgb(15, 26, 12);
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  position: absolute;
+}
+
+.startingPage {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(81, 38, 8);
+  border: 2px solid rgb(15, 26, 12);
+  transition: transform 0.5s;
+}
+
+.gameRules {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+  transform: rotateY(180deg);
+}
+
+.gameRules h2 {
+  color: rgb(23, 188, 86);
+  font-size: 4rem;
+}
+
+.gameRulesText {
+  color: rgb(255, 255, 0);
+  padding: 1rem;
+}
+
+.startBtn {
+  border: 3px solid rgb(15, 26, 12);
+  margin: auto;
+  padding: 4px 12px;
+  background-color: rgb(86, 231, 142);
+  color: rgb(81, 38, 8);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.startBtn:hover {
+  background-color: rgb(23, 188, 86);
+  color: rgb(255, 255, 0);
+}
+
+.tittle {
+  padding-block: 2rem;
+  display: grid;
+  gap: 1rem;
+  height: 100%;
+  align-items: center;
+}
+
+.tittle h1 {
+  color: rgb(255, 255, 0);
+  font-size: 3.5rem;
+}
+.tittle p {
+  color: white;
+  font-size: 2rem;
+}
+
+.chooseDifficulty,
+.nameInputContainer {
+  height: 40%;
+  width: min(70rem, 80%);
+  margin: auto;
+  border: 3px solid rgb(15, 26, 12);
+}
+
+.nameInputContainer {
+  display: none;
+}
+
+.chooseDifficulty {
+  display: none;
+}
+
+
+.levels {
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.levels p {
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.difficultyBtn {
+  display: grid;
+  gap: 0.5rem;
+  padding: 5px;
+}
+
+.easyBtn,
+.meduimBtn,
+.hardBtn {
+  font-size: 1rem;
+  border: 3px solid rgb(15, 26, 12);
+  color: rgb(15, 26, 12);
+  padding: 4px 0;
+  cursor: pointer;
+  background-color: rgb(86, 231, 142);
+  transition: 0.5s;
+}
+
+.easyBtn:hover,
+.meduimBtn:hover,
+.hardBtn:hover {
+  background-color: rgb(23, 188, 86);
+  color: rgb(255, 255, 0);
+}
+
+.playersNameWrapper {
+  height: 100%;
+  display: grid;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.playersNameWrapper p {
+  font-size: 2rem;
+  text-align: center;
+  color: rgb(86, 231, 142);
+}
+
+.playersName {
+  width: 50%;
+  margin: auto;
+  padding: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 3px solid black;
+  text-align: center;
+}
+
+.enterBtn {
+  margin: auto;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: rgb(15, 26, 12);
+  color: rgb(255, 255, 0);
+  transition: 0.5s;
+}
+
+.enterBtn:disabled {
+  background-color: rgb(37, 58, 32);
+  color: rgb(116, 116, 3);
+}
+
+main {
+  display: none;
+  grid-template-rows: auto 1fr auto;
+  width: 100%;
+  height: 100%;
+}
+
+.playAgain,
+.scoring {
+  display: grid;
+  grid-auto-flow: column;
+  width: min(90rem, 100%);
+  margin-inline: auto;
+}
+
+
+.playAgain {
+  padding: 1rem 2rem;
+  margin-bottom: auto;
+}
+
+.enteredName {
+  color: rgb(255, 255, 0);
+  font-size: 2rem;
+}
+
+.replayBtn {
+  margin-left: auto;
+  padding: 0.5rem 1rem;
+  border: 3px solid rgb(15, 26, 12);
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: rgb(255, 255, 0);
+}
+
+.replayBtn:hover {
+  background-color: rgb(23, 188, 86);
+}
+
+.gameArena {
+  height: auto;
+  width: 100%;
+  position: relative;
+}
+
+.generalcardWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  height: 100%;
+  padding: 2rem;
+  width: min(90rem, 100%);
+  margin-inline: auto;
+}
+
+.restartContainer {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: min(80rem, 100%);
+  padding: 5rem;
+  z-index: 2;
+}
+
+.restartWrapper {
+  background-color: rgb(81, 38, 8);
+  border: 2px solid rgb(86, 231, 142);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.restartTittle {
+  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 0);
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.5;
+  animation: 0.5s infinite scaleUpandDown;
+}
+
+@keyframes scaleUpandDown {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.RestartText {
+  color: rgb(160, 228, 186);
+  font-size: 2rem;
+}
+
+.restartWrapper button {
+  margin-right: auto;
+  margin-bottom: 1rem;
+}
+
+.match {
+  display: none;
+}
+
+.disapper {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease;
+}
+
+.backFlip {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.frontFlip {
+  transform: rotateY(180deg);
+  opacity: 1;
+  z-index: 999;
+}
+.flipped {
+  transform: rotateY(180deg);
+  z-index: 999;
+  opacity: 1;
+}
+
+.flipME {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.clicked {
+  pointer-events: none;
+}
+
+.cardStack {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  transform-style: preserve-3d;
+}
+
+.backCard {
+  z-index: 1;
+  background-color: rgb(160, 228, 186);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.cross,
+.circle,
+.block,
+.x {
+  background-color: rgb(255, 255, 255);
+  transition: transform 0.5s;
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.cross::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 15px;
+  background-color: rgb(81, 38, 8);
+}
+.cross::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 60px;
+  background-color: rgb(81, 38, 8);
+  z-index: 1;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  height: 65px;
+  width: 60px;
+  background-color: rgb(81, 38, 8);
+  border-radius: 50%;
+}
+
+.block::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: rgb(81, 38, 8);
+}
+
+.x::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 15px;
+  background-color: rgb(81, 38, 8);
+  z-index: 1;
+  transform: rotate(45deg);
+}
+
+.x::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 60px;
+  background-color: rgb(81, 38, 8);
+  z-index: 1;
+  transform: rotate(45deg);
+}
+
+.trials,
+.score,
+.HighestScore {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.trailsNo,
+.scoreNo,
+.trailsNo {
+  color: rgb(86, 231, 142);
+  font-size: 2rem;
+}
+
+@media (min-width: 650px) {
+  main {
+    grid-template-rows: unset;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  .playAgain {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 1rem;
+  }
+
+  .scoring {
+    grid-auto-flow: unset;
+    align-content: space-between;
+    padding-block:  2rem;
+    padding-inline: 1rem;
+  }
+
+}
